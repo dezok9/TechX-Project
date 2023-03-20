@@ -1,1 +1,0 @@
-# TechX-Project
