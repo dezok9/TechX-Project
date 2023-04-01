@@ -1,0 +1,50 @@
+/*Background: #333333
+Sample Hex Code: #5887FF
+Hex Code Box: #565656 
+Text Boxes: #D9D9D9 */
+
+body {
+  background-color: #0000;
+  margin: 0;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', sans-serif;
+  border-radius: 10px;
+}
+
+header {
+  font-weight: 800;
+  text-shadow: 0px 4px 4px blue;
+  font-size: 7rem;
+  color: white;
+}
+
+button {
+  padding: 10px !important;
+  border-radius: 20px !important;
+  color: white !important;
+  border: 3px solid white !important;
+  transition: all 200ms ease-in-out;
+}
+
+button:hover{
+  border-color: blue !important;
+}
+
+a {
+  color: white !important;
+}
+
+input {
+  color: white;
+}
+
+input:hover {
+  background-color: black;
+  transition: all 200ms ease-in-out;
+}
+
+input:active, input:focus {
+  background-color: black;
+}

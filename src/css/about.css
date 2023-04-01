@@ -1,0 +1,18 @@
+* {
+    background-color: #333333;
+}
+
+.website-body {
+    padding: 0 5% 0 5%; 
+}
+
+.header {
+    color: white;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.information {
+    
+    color: white;
+}

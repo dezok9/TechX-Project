@@ -1,0 +1,29 @@
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+/* button:hover{
+  border-color: blue !important;
+} */
+
+.accordion {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion-button { /*Accordion.Header elements*/
+  color: black !important;
+}
+
+.accordion-item {
+  /* margin: 0 auto !important; */
+  width: 70% !important;
+
+}
+
+.accordion-body {
+  color: white;
+}
