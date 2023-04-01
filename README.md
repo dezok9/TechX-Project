@@ -1,0 +1,1 @@
+Colorbilities allows the user to input a color and learn how colorblind people view the same color. It also provides information about the different types of colorblindness.
