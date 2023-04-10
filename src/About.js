@@ -9,7 +9,7 @@ export function About() {
       <header>
         About Us
       </header>
-      <ColorPickerImp/> 
+      {/* <ColorPickerImp/>  */}
       <div class = "website-body">
         <div class = "information">
           Hello.

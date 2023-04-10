@@ -1,8 +1,21 @@
 import React from 'react'
 
 export function Result(props) {
-  var blinder = require('color-blind');
-  const result = blinder.protanopia(props.color); 
+  const blinder = require('color-blind');
+  var result = blinder.protanomaly(props.color); 
+  const select = () => {
+    switch(props.type){
+        case "protanomaly":
+            result = blinder.protanomaly(props.color);
+            break;
+        case "deuteranomaly":
+            result = blinder.deuteranomaly(props.color);
+            break;
+        case "tritanomaly":
+            result = blinder.tritanomaly(props.color);
+    }
+  }
+  select();
   return (
     <div>
         <div>

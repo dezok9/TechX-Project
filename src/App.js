@@ -5,8 +5,6 @@ import {Home} from './Home.js'
 import {Nav} from "./Nav.js"
 import {About} from "./About.js"
 import "./css/App.css";
-import NameForm from "./Components/NameForm"
-import {Result} from "./Components/Result"
 
 export default function App() {
   return (
@@ -14,7 +12,7 @@ export default function App() {
       <Nav/>
       <Router>
         <Routes>
-          <Route path='' element={<Home/>}/>
+          <Route exact path='/' element={<Home/>}/>
           <Route path='/about' element={<About/>} />
         </Routes>
       </Router>

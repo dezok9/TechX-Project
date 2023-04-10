@@ -1,20 +1,34 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Button} from "./Button.js"
 import { Header } from './Header.js'
 import {Description} from './Description.js'
 import "./css/index.css"
 import "./css/App.css";
-import NameForm from "./Components/NameForm"
 import {Result} from "./Components/Result"
 
 
 
 export function Home() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    localStorage.setItem('dataKey', JSON.stringify(data));
-  }, [data]);
+  const [message, setMessage] = useState('');
+  const [type, setType] = useState('');
+  const handleChange = (e) => {
+    // 👇 Get input value from "event"
+    setMessage(e.target.value);
+  };
+   const options = [
+    {
+      label: "Deuteranomaly",
+      value: "deuteranomaly",
+    },
+    {
+      label: "Protanomaly",
+      value: "protanomaly",
+    },
+    {
+      label: "Tritanomaly",
+      value: "tritanomaly",
+    },
+  ];
   return (
     <div>
       <Header/>
@@ -24,25 +38,40 @@ export function Home() {
             <Button name="Hex"/>
             <Button name="Color Palette"/>
             <Button name="Rgb"/>
-            <NameForm>
-              <script>
-                
-              </script>
-            </NameForm>
-
+            <div>
+            <input
+              type="text"
+              id="message"
+              name="message"
+              onChange={handleChange}
+            />
+            
+          </div>
           </div>
         </div>
         <div className='col'>
           <div className='d-flex align-items-center justify-content-evenly  click'>
+          <div className="select-container">
+            <select value={type} onClick={e =>{
+              setType(e.target.value)
+            }} 
+            className='text-light'>
+              {options.map((option) => (
+                <option value={option.value}>{option.label}</option>
+              ))}
+            </select>
+          </div>
             <h1>Result</h1>
-            <Result></Result>
+            <Result color={message} type={type}></Result>
           </div>
         </div>
       </div>
       <div>
       
       </div>
-      <Description/>
+      <div className='border-0 accordion-flush'>      
+        <Description/>
+      </div>
 
     </div>
 
