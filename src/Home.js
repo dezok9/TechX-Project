@@ -7,28 +7,30 @@ import "./css/App.css";
 import {Result} from "./Components/Result"
 
 
-
+const options = [
+  {
+    label: "Deuteranomaly",
+    value: "deuteranomaly",
+  },
+  {
+    label: "Protanomaly",
+    value: "protanomaly",
+  },
+  {
+    label: "Tritanomaly",
+    value: "tritanomaly",
+  },
+];
 export function Home() {
   const [message, setMessage] = useState('');
-  const [type, setType] = useState('');
+  const [type, setType] = useState("");
   const handleChange = (e) => {
     // 👇 Get input value from "event"
     setMessage(e.target.value);
   };
-   const options = [
-    {
-      label: "Deuteranomaly",
-      value: "deuteranomaly",
-    },
-    {
-      label: "Protanomaly",
-      value: "protanomaly",
-    },
-    {
-      label: "Tritanomaly",
-      value: "tritanomaly",
-    },
-  ];
+  const handleType = (e) => {
+    setType(e.target.value);
+  }
   return (
     <div>
       <Header/>
@@ -52,9 +54,7 @@ export function Home() {
         <div className='col'>
           <div className='d-flex align-items-center justify-content-evenly  click'>
           <div className="select-container">
-            <select value={type} onClick={e =>{
-              setType(e.target.value)
-            }} 
+            <select value={options.value} onChange={handleType}
             className='text-light'>
               {options.map((option) => (
                 <option value={option.value}>{option.label}</option>
