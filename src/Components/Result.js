@@ -13,6 +13,10 @@ export function Result(props) {
             break;
         case "tritanomaly":
             result = blinder.tritanomaly(props.color);
+            break;
+        default:
+          result = blinder.protanomaly(props.color);
+          break;
     }
   }
   select();
