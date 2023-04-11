@@ -80,7 +80,10 @@ export function Home() {
       <div>
             <ColorPicker width = {456} height = {228}
                   color = {color}
-                  onChange = {setColor} hideHSV dark />
+                  onChange = {setColor}
+                  hideHEX = {true}
+                  hideRGB = {true}
+                  hideHSV dark />
       </div>
 
     </div>
