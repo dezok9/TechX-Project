@@ -6,6 +6,9 @@ import "./css/index.css"
 import "./css/App.css";
 import {Result} from "./Components/Result"
 
+import {ColorPicker, useColor} from "react-color-palette";
+import "react-color-palette/lib/css/styles.css"
+
 
 const options = [
   {
@@ -22,6 +25,8 @@ const options = [
   },
 ];
 export function Home() {
+  const [color, setColor] = useColor("hex", "121212")
+
   const [message, setMessage] = useState('');
   const [type, setType] = useState("");
   const handleChange = (e) => {
