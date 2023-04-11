@@ -6,9 +6,6 @@ import "./css/index.css"
 import "./css/App.css";
 import {Result} from "./Components/Result"
 
-import {ColorPicker, useColor} from "react-color-palette";
-import "react-color-palette/lib/css/styles.css"
-
 
 const options = [
   {
@@ -25,8 +22,6 @@ const options = [
   },
 ];
 export function Home() {
-  const [color, setColor] = useColor("hex", "121212")
-
   const [message, setMessage] = useState('');
   const [type, setType] = useState("");
   const handleChange = (e) => {
@@ -74,12 +69,6 @@ export function Home() {
         </div>
       </div>
       <div>
-            <ColorPicker width = {456} height = {228}
-                  color = {color}
-                  onChange = {setColor}
-                  hideHEX = {true}
-                  hideRGB = {true}
-                  hideHSV dark />
       
       </div>
       <div className='border-0 accordion-flush'>      
