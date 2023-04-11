@@ -1,7 +1,6 @@
 import React from 'react'
 import "./css/about.css"
 import "./css/App.css";
-import {ColorPickerImp} from "./ColorPickerImp.js"
 
 export function About() {
   return (

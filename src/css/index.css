@@ -20,10 +20,11 @@
 
 .accordion-item {
   /* margin: 0 auto !important; */
-  width: 70% !important;
+  width: 50% !important;
 
 }
 
 .accordion-body {
   color: white;
+  
 }
