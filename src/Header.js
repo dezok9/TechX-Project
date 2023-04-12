@@ -7,7 +7,7 @@ export function Header() {
         <header>
             COLORBILITIES
         </header>
-        <div class="animationWrap" style={{height: "50px", width: "390px"}}>
+        {/* <div class="animationWrap" style={{height: "50px", width: "390px"}}>
           <div class="el"></div>
           <div class="el"></div>
           <div class="el"></div>
@@ -16,7 +16,7 @@ export function Header() {
           <div class="el"></div>
           <div class="el"></div>
           <div class="el"></div>
-        </div>
+        </div> */}
     </div>
   )
 }
