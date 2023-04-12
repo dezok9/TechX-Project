@@ -1,4 +1,4 @@
-* {
+html {
     background-color: #333333;
 }
 
@@ -15,4 +15,14 @@
 .information {
     
     color: white;
+}
+
+.card {
+    background-color: white;
+    color: black !important;
+    margin: 20px;
+}
+
+main {
+    display: flex;
 }

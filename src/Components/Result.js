@@ -2,20 +2,20 @@ import React from 'react'
 
 export function Result(props) {
   const blinder = require('color-blind');
-  var result = blinder.protanomaly(props.color); 
+  var result = blinder.protanomaly(props.col); 
   const select = () => {
     switch(props.type){
         case "protanomaly":
-            result = blinder.protanomaly(props.color);
+            result = blinder.protanomaly(props.col);
             break;
         case "deuteranomaly":
-            result = blinder.deuteranomaly(props.color);
+            result = blinder.deuteranomaly(props.col);
             break;
         case "tritanomaly":
-            result = blinder.tritanomaly(props.color);
+            result = blinder.tritanomaly(props.col);
             break;
         default:
-          result = blinder.protanomaly(props.color);
+          result = blinder.protanomaly(props.col);
           break;
     }
   }
@@ -23,7 +23,7 @@ export function Result(props) {
   return (
     <div>
         <div>
-            <h1 style={{background: props.color}}>Before</h1>
+            <h1 style={{background: props.col}}>Before</h1>
             <h1 className='' style={{background: result}}>After</h1>
         </div>
       
