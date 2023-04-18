@@ -28,6 +28,8 @@ const options = [
 export function Home() {
   const [color, setColor] = useColor("hex", "121212")
   const [message,setMessage] = useState("#121212")
+  const [tabIndex, setTabIndex] = useState(0);
+
   const [type, setType] = useState("");
   const handleChange = (e) => {
     // 👇 Get input value from "event"
@@ -40,7 +42,7 @@ export function Home() {
     <div>
       <Header/>
       
-      <Tabs>
+      <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList>
           <Tab>Hex Code</Tab>
           <Tab>Color Palette</Tab>
@@ -55,7 +57,7 @@ export function Home() {
             <Button name="Color Palette"/>
             <Button name="Rgb"/>
             <div>
-              <TabPanel>
+              {/* <TabPanel forceRender='true'> */}
                 <input
                   type="text"
                   id="message"
@@ -63,7 +65,7 @@ export function Home() {
                   onChange={handleChange}
                   hideHSV 
                 />
-              </TabPanel>
+              {/* </TabPanel> */}
                </div>
           </div>
         </div>
@@ -86,7 +88,7 @@ export function Home() {
       </div>
       <div>
 
-          <TabPanel>
+          {/* <TabPanel default= "true"> */}
             <ColorPicker width = {456} height = {228}
                   color = {color}
                   onChange = {setColor}
@@ -95,7 +97,7 @@ export function Home() {
                     
                   </ColorPicker>
               {/* <Rgb></Rgb> */}
-          </TabPanel>
+          {/* </TabPanel> */}
       
       </div>
       <div className='border-0 accordion-flush'>      
