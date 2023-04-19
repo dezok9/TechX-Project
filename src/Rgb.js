@@ -1,32 +1,26 @@
 import React from 'react'
-import "./css/rgb.css"
-import "./rg.js"
+import {parseColor} from '@react-stately/color';
+import {ColorSlider} from '@react-spectrum/color'
+import {Slider} from '@adobe/react-spectrum'
+
+
 
 export function Rgb() {
-    
+  let [value, setValue] = React.useState(parseColor('hsl(0, 100%, 50%)'));
   return (
-    <div>
-        <script src="./rg.js"></script>
-      <fieldset>
-        <label for="r">R</label>
-        <input type="range" min="0" max="255" id="r" step="1" value="0"/>
-        <output for="r" id="r_out">0</output>
-        </fieldset>  
+    <div gap="size-300" wrap>
+      <ColorSlider defaultValue="#7f0000" channel="red" />
+      <Slider label="Cookies to buy" defaultValue={12} />
 
-        <fieldset>
-        <label for="g">G</label>
-        <input type="range" min="0" max="255" id="g" step="1" value="0"/>
-        <output for="g" id="g_out">0</output>
-        </fieldset>
-
-        <fieldset>
-        <label for="b">B</label>
-        <input type="range" min="0" max="255" id="b" step="1" value="0"/>
-        <output for="b" id="b_out">0</output>
-        </fieldset>  
-
-        <output id="hex">#000000</output>
+      <ColorSlider
+        label="Hue (uncontrolled)"
+        defaultValue="hsl(0, 100%, 50%)"
+        channel="hue" />
+      <ColorSlider
+        label="Hue (controlled)"
+        value={value}
+        onChange={setValue}
+        channel="hue" />
     </div>
-  )
+  );
 }
-
