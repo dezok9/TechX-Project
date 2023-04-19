@@ -3,9 +3,10 @@ import "./css/App.css";
 
 export function Header() {
   return (
-    <div>
+    <div class="banner">
         <header>
-            COLORBILITIES
+          {/* <h1>COLORBILITIES</h1> */}
+          COLORBILITIES
         </header>
         <div class="animationWrap">
           <div class="el a"></div>

@@ -101,6 +101,8 @@ export function Home() {
 
         <div className='col mb-3'>
           <div className='d-flex align-items-center justify-content-evenly  click'>
+
+            {/*The option for which color blindness you are attempting to render for.*/}
             <div className="select-container row">
               <select value={options.value} onChange={handleType} className='text-dark'> 
                   {options.map((option) => (
@@ -108,6 +110,8 @@ export function Home() {
                 ))}
               </select>
             </div>
+
+            
 
             <div className='row'>
               <h1>Result</h1>
