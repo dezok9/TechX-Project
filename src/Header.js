@@ -5,7 +5,6 @@ export function Header() {
   return (
     <div class="banner">
         <header>
-          {/* <h1>COLORBILITIES</h1> */}
           COLORBILITIES
         </header>
         <div class="animationWrap">

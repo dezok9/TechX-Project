@@ -55,7 +55,7 @@ export function Home() {
             <Tab>RGB</Tab>
           </TabList>
           <div className='col'>
-            <div className='d-flex align-items-center justify-content-evenly  click'>
+            <div className = 'd-flex align-items-center justify-content-evenly click'>
               {/* <Button name="Hex"/> */}
               {/* <Button name="Color Palette"/> */}
               {/* <Button name="Rgb"/> */}
@@ -93,8 +93,7 @@ export function Home() {
         </Tabs>
       </div>
 
-      <div className='col mb-3'>
-          <div className='d-flex align-items-center justify-content-evenly  click'>
+          <div className = 'd-flex align-items-center justify-content  click'>
 
             <div className='flex-item'>
               {/*The option for which color blindness you are attempting to render for.*/}
@@ -107,6 +106,7 @@ export function Home() {
               </div>
 
               {/*Result boxes */}
+            <div>
               <h1 className = "title"><strong>Result</strong></h1>
               <Result col={color.hex} type={type}></Result>
             </div>
