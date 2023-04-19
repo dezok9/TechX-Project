@@ -111,7 +111,7 @@ export function Home() {
               </select>
             </div>
 
-            
+
 
             <div className='row'>
               <h1>Result</h1>
