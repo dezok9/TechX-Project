@@ -2,17 +2,30 @@ import React from 'react'
 import {parseColor} from '@react-stately/color';
 import {ColorSlider} from '@react-spectrum/color'
 import {Button, defaultTheme, Provider} from '@adobe/react-spectrum';
+import { render } from '@testing-library/react';
 
 
 
-export function Rgb() {
-  let [color, setColor] = React.useState(parseColor('#ff00ff'));
-  return (
-    <Provider theme={defaultTheme} class="text-center">
-      <ColorSlider channel="red" value={color} onChange={setColor} />
-      <ColorSlider channel="green" value={color} onChange={setColor} />
-      <ColorSlider channel="blue" value={color} onChange={setColor} />
-      <ColorSlider channel="alpha" value={color} onChange={setColor} />
-    </Provider>
-  );
+export class Rgb extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      color: parseColor('#ff00ff')
+    };
+  }
+  render() {
+    return (
+      <div>
+        <Provider theme={defaultTheme} class="text-center">
+          <div>
+          <ColorSlider channel="red" value={this.state.color} onChange={() => this.setState({ color: this.state.color})}/>
+          <ColorSlider channel="green" value={this.state.color} onChange={() => this.setState({ color: this.state.color})} />
+          <ColorSlider channel="blue" value={this.state.color} onChange={() => this.setState({ color: this.state.color})} />
+          </div>
+      </Provider>
+      <div classname="border" style={{background: this.state.color.toString}}>dfljalsdjflkajskldfj</div>
+  
+      </div>
+    )
+  }
 }
