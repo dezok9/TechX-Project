@@ -4,7 +4,7 @@ import { Header } from './Header.js'
 import {Description} from './Description.js'
 import {Result} from "./Components/Result"
 import {ColorPicker, useColor} from "react-color-palette";
-// import {Rgb} from "./Rgb.js"
+import {Rgb} from "./Rgb.js"
 import "react-color-palette/lib/css/styles.css"
 import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -29,6 +29,7 @@ export function Home() {
   const [color, setColor] = useColor("hex", "121212")
   const [message,setMessage] = useState("#121212")
   const [tabIndex, setTabIndex] = useState(0);
+  const [section, setSection] = useState(null);
 
   const [type, setType] = useState("");
   const handleChange = (e) => {
@@ -53,9 +54,9 @@ export function Home() {
       <div className='d-flex mt-5'>
         <div className='col'>
           <div className='d-flex align-items-center justify-content-evenly  click'>
-            <Button name="Hex"/>
+            {/* <Button name="Hex"/>
             <Button name="Color Palette"/>
-            <Button name="Rgb"/>
+            <Button name="Rgb"/> */}
             <div>
               {/* <TabPanel forceRender='true'> */}
                 <input
@@ -66,7 +67,20 @@ export function Home() {
                   hideHSV 
                 />
               {/* </TabPanel> */}
-               </div>
+              </div>
+              <div>
+                {/* <TabPanel default= "true"> */}
+                  <ColorPicker width = {456} height = {228}
+                        color = {color}
+                        onChange = {setColor}
+                        hideRGB = {true}
+                        hideHSV = {true} dark >      
+                  </ColorPicker>
+                {/* </TabPanel> */}
+              </div>
+              <div>
+                <Rgb/>
+              </div>
           </div>
         </div>
         <div className='col mb-3'>
@@ -85,20 +99,6 @@ export function Home() {
             </div>
           </div>
         </div>
-      </div>
-      <div>
-
-          {/* <TabPanel default= "true"> */}
-            <ColorPicker width = {456} height = {228}
-                  color = {color}
-                  onChange = {setColor}
-                  hideRGB = {true}
-                  hideHSV = {true} dark >
-                    
-                  </ColorPicker>
-              {/* <Rgb></Rgb> */}
-          {/* </TabPanel> */}
-      
       </div>
       <div className='border-0 accordion-flush'>      
         <Description/>
