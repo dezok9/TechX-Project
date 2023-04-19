@@ -10,7 +10,7 @@ export function Description() {
       <Accordion.Item eventKey="0">
         <Accordion.Header>Deuteranomaly</Accordion.Header>
         <Accordion.Body className="description">
-        <strong>Deuteranomaly</strong> aka red-green color blindness is the most common form of color blindness; people with deuteranomaly have a reduced sensitivity to red hues. Red and green hues often look very similar, but this is often mild.
+        <strong>Deuteranomaly</strong>, AKA red-green color blindness, is the most common form of color blindness; people with deuteranomaly have a reduced sensitivity to red hues. Red and green hues often look very similar, but this is often mild.
 
 
         </Accordion.Body>

@@ -32,3 +32,18 @@
   color: black;
   
 }
+
+.interactive-content {
+  display: flex;
+  border: solid 1px white; 
+}
+
+.interactive-conent-container {
+  justify-content: space-around;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.7rem;
+}
+
