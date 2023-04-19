@@ -44,6 +44,7 @@ export function Home() {
     
       <div className='d-flex mt-5'>
 
+      <div className = "tabs">
       {/*The below 'Tabs' tab contains only the items that are going to be hidden/displayed in tabs.*/}  
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList>
@@ -57,7 +58,7 @@ export function Home() {
             {/* <Button name="Color Palette"/> */}
             {/* <Button name="Rgb"/> */}
           <div>
-            <TabPanel forceRender='true'>
+            <TabPanel forceRender='true' >
               {/*Text box tab*/}
               <input
                 type="text"
@@ -91,10 +92,12 @@ export function Home() {
                 hideHSV 
               />
             </TabPanel>
-          </div>
+
+        </div>
         </div>
         </div>
       </Tabs>
+      </div>
 
         <div className='col mb-3'>
           <div className='d-flex align-items-center justify-content-evenly  click'>
