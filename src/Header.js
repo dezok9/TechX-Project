@@ -7,16 +7,16 @@ export function Header() {
         <header>
             COLORBILITIES
         </header>
-        {/* <div class="animationWrap" style={{height: "50px", width: "390px"}}>
+        <div class="animationWrap" style={{height: 60}} >
+          <div class="el a"></div>
+          <div class="el b"></div>
+          <div class="el c"></div>
+          <div class="el d"></div>
           <div class="el"></div>
           <div class="el"></div>
           <div class="el"></div>
           <div class="el"></div>
-          <div class="el"></div>
-          <div class="el"></div>
-          <div class="el"></div>
-          <div class="el"></div>
-        </div> */}
+        </div>
     </div>
   )
 }
