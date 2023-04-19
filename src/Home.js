@@ -4,7 +4,7 @@ import { Header } from './Header.js'
 import {Description} from './Description.js'
 import {Result} from "./Components/Result"
 import {ColorPicker, useColor} from "react-color-palette";
-// import {Rgb} from "./Rgb.js"
+import {Rgb} from "./Rgb.js"
 import "react-color-palette/lib/css/styles.css"
 import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -77,20 +77,12 @@ export function Home() {
                   hideRGB = {true}
                   hideHSV = {true} dark >
             </ColorPicker>
-              {/* <Rgb></Rgb> */}
             </TabPanel>
           </div>
 
           <div>
             <TabPanel forceRender='true'>
-              {/*Text box tab*/}
-              <input
-                type="text"
-                id="message"
-                name="message"
-                onChange={handleChange}
-                hideHSV 
-              />
+            <Rgb></Rgb>
             </TabPanel>
 
         </div>
