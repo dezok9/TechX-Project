@@ -32,3 +32,22 @@
   color: black;
   
 }
+
+.flex-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+
+}
+
+.flex-items {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.result-boxes {
+  width: 170px;
+  height: 170px;
+  border-radius: 10px;
+  text-align: center;
+}
