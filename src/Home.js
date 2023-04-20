@@ -40,85 +40,69 @@ export function Home() {
     setType(e.target.value);
   }
   return (
-    <div>
+    <div style = {{width: "100%"}}>
       <Header/>
-    
-      <div className = "interactive-conent">
-
-      <div className = "interactive-content-container">
-
-      <div className = "tabs">
-        {/*The below 'Tabs' tab contains only the items that are going to be hidden/displayed in tabs.*/}  
-        <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-          <TabList>
-            <Tab>Hex Code</Tab>
-            <Tab>Color Palette</Tab>
-            <Tab>RGB</Tab>
-          </TabList>
-          <div className='col'>
-            <div className = 'd-flex align-items-center justify-content-evenly click'>
-              {/* <Button name="Hex"/> */}
-              {/* <Button name="Color Palette"/> */}
-              {/* <Button name="Rgb"/> */}
-            <div>
-              <TabPanel forceRender='true' >
-                {/*Text box tab*/}
-                <input
+      
+      {/* <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+        <TabList>
+          <Tab>Hex Code</Tab>
+          <Tab>Color Palette</Tab>
+          <Tab>RGB</Tab>
+        </TabList>
+      </Tabs>  */}
+      <div>
+      <div className='flex-container'>
+          <div className='flex-items'>
+            {/* <Button name="Hex"/>
+            <Button name="Color Palette"/>
+            <Button name="Rgb"/> */}
+            {/* <div> */}
+              {/* <TabPanel forceRender='true'> */}
+                {/* <input
                   type="text"
                   id="message"
                   name="message"
                   onChange={handleChange}
                   hideHSV 
-                />
-              </TabPanel>
-            </div>
-            <div>
-              <TabPanel default= "true">
-              <ColorPicker width = {456} height = {228}
-                    color = {color}
-                    onChange = {setColor}
-                    hideRGB = {true}
-                    hideHSV = {true} dark >
-              </ColorPicker>
-              </TabPanel>
-            </div>
-
-            <div>
-              <TabPanel forceRender='true'>
-              <Rgb></Rgb>
-              </TabPanel>
-
-          </div>
-          </div>
-          </div>
-        </Tabs>
-      </div>
-
-          <div className = 'd-flex align-items-center justify-content  click'>
-
-            <div className='flex-item'>
-              {/*The option for which color blindness you are attempting to render for.*/}
-              <div className = "select-container row">
-                <select value={options.value} onChange={handleType} className='text-dark'> 
-                    {options.map((option) => (
-                    <option value={option.value}>{option.label}</option>
-                  ))}
-                </select>
+                /> */}
+              {/* </TabPanel> */}
+              {/* </div> */}
+              <div style = {{margin: "20px"}}>
+                {/* <TabPanel default= "true"> */}
+                  <ColorPicker width = {456} height = {228}
+                        color = {color}
+                        onChange = {setColor}
+                        hideRGB = {true}
+                        hideHSV = {true} dark 
+                        >      
+                  </ColorPicker>
+                {/* </TabPanel> */}
               </div>
-
-              {/*Result boxes */}
-            <div>
-              <h1 className = "title"><strong>Result</strong></h1>
+              {/* <div> */}
+                {/* <Rgb/> */}
+              {/* </div> */}
+        {/* </div> */}
+        {/* <div className='col mb-3'> */}
+          {/* <div className='d-flex align-items-center justify-content-evenly  click'> */}
+          <div style = {{ width: "456px", height: "260px", margin: "20px"}}>
+              <select value={options.value} onChange={handleType}
+              className='text-dark'>
+                {options.map((option) => (
+                  <option value={option.value}>{option.label}</option>
+                ))}
+              </select>
+            <div className='row'>
+              <h1 style = {{textAlign: "center"}}><strong>Result</strong></h1>
               <Result col={color.hex} type={type}></Result>
             </div>
-
-          </div> 
+            {/* </div> */}
+          {/* </div> */}
+          </div>
         </div>
       </div>
-    </div>
+      </div>
 
-      {/*Accordion feature*/}
-      <div className='border-0 accordion-flush'>      
+      <div className='border-0 accordion-flush' style = {{marginBottom: "7%"}}>      
         <Description/>
       </div>
   </div>

@@ -23,10 +23,11 @@ export function Result(props) {
   select();
   return (
     <div>
-        <div className = "result-container">
-            <h1 style={{background: props.col}} className = "result-color" >Before</h1>
-            <h1 style={{background: result}} className = "result-color" >After</h1>
-        </div>  
+        <div style = {{display: "flex"}}>
+            <h1 className = "result-boxes" style={{background: props.col, margin: "10px", textAlign: "bottom"}}>Before</h1>
+            <h1 className = "result-boxes" style={{background: result, margin: "10px", textAlign: "bottom"}}>After</h1>
+        </div>
+      
     </div>
   )
 }
