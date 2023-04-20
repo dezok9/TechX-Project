@@ -1,4 +1,5 @@
 import React from 'react'
+import "./../css/App.css"
 
 export function Result(props) {
   const blinder = require('color-blind');

@@ -2,7 +2,7 @@
 Sample Hex Code: #5887FF
 Hex Code Box: #565656 
 Text Boxes: #D9D9D9 */
-
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Fredericka+the+Great&display=swap');
 body {
   background-color: #0000;
   margin: 0;
@@ -13,12 +13,20 @@ body {
   border-radius: 10px;
 }
 
+.banner {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
 header {
-  font-weight: 800;
-  text-shadow: 0px 4px 4px blue;
-  font-size: 7rem;
+  /* font-weight: 500; */
+  text-shadow: 0px 4px 10px blue;
   color: white;
-  margin-left: 20px;
+  /* margin-left: 20px; */
+  font-size: 10vw;
+  font-family: 'Fredericka the Great', cursive;
 }
 
 button {
@@ -33,47 +41,167 @@ button:hover{
   border-color: blue !important;
 }
 
-/* a {
-  color: white !important;
-} */
-
 input {
-  color: white;
+  color: black;
+  border-radius: 10px;
+  border: none;
 }
 
 input:hover {
-  background-color: black;
+  background-color: lightgrey;
   transition: all 200ms ease-in-out;
 }
 
 input:active, input:focus {
-  background-color: black;
+  background-color: lightgrey;
 }
 
-/* .el {
-  position: absolute;
+.animationWrap {
+  display: flex;
+  height: auto;
+  width: inherit;
+  max-width: 95vw;
+  margin-bottom: 50px;
+}
+
+.el {
   animation-name: go;
   animation-iteration-count: infinite;
   width: 40px;
   height: 40px;
-  animation-duration: 5s;
-  border-radius: 5px;
+  animation-duration: 6s;
+  border-radius: 100px;
+  background-color: #2c1fe0;
+  position: relative;
+  margin: 5px;
 }
 
-@for $i from 1 through 8 {
-  .el:nth-child(#{$i}) {
-    animation-delay: $i * 0.3s;
-    background-color: #1fe2ef;
-    top: ($i - 1) * 0px;
-    left: ($i - 1) * 50px;
-  }
+.a {
+  animation-delay: 0.4s;
+  top: (1 - 1) * 0px;
+  left: (1 - 1) * 60px;
+}
+.b {
+  animation-delay: 0.8s;
+  top: (2 - 1) * 0px;
+  left: (2 - 1) * 60px;
+}
+.c {
+  animation-delay: 1.2s;
+  top: (3 - 1) * 0px;
+  left: (3 - 1) * 60px;
+}
+.d {
+  animation-delay: 1.6s;
+  top: (4 - 1) * 0px;
+  left: (4 - 1) * 60px;
+}
+.e {
+  animation-delay: 2s;
+  top: (4 - 1) * 0px;
+  left: (4 - 1) * 60px;
+}
+.f {
+  animation-delay: 2.4s;
+  top: (4 - 1) * 0px;
+  left: (4 - 1) * 60px;
+}
+.g {
+  animation-delay: 2.8s;
+  top: (4 - 1) * 0px;
+  left: (4 - 1) * 60px;
+}
+.h {
+  animation-delay: 3.2s;
+  top: (4 - 1) * 0px;
+  left: (4 - 1) * 60px;
+}
+.i {
+  animation-delay: 3.6s;
+  top: (4 - 1) * 0px;
+  left: (4 - 1) * 60px;
+}
+.j {
+  animation-delay: 4s;
+  top: (4 - 1) * 0px;
+  left: (4 - 1) * 60px;
+}
+.k {
+  animation-delay: 4.4s;
+  top: (4 - 1) * 0px;
+  left: (4 - 1) * 60px;
+}
+.l {
+  animation-delay: 4.8s;
+  top: (4 - 1) * 0px;
+  left: (4 - 1) * 60px;
+}
+.m {
+  animation-delay: 5.2s;
+  top: (4 - 1) * 0px;
+  left: (4 - 1) * 60px;
+}
+.n {
+  animation-delay: 5.6s;
+  top: (4 - 1) * 0px;
+  left: (4 - 1) * 60px;
+}
+.o {
+  animation-delay: 6s;
+  top: (4 - 1) * 0px;
+  left: (4 - 1) * 60px;
+}
+.p {
+  animation-delay: 6.4s;
+  top: (4 - 1) * 0px;
+  left: (4 - 1) * 60px;
+}
+.q {
+  animation-delay: 6.8s;
+  top: (4 - 1) * 0px;
+  left: (4 - 1) * 60px;
+}
+.r {
+  animation-delay: 7.2s;
+  top: (4 - 1) * 0px;
+  left: (4 - 1) * 60px;
+}
+.s {
+  animation-delay: 7.6s;
+  top: (4 - 1) * 0px;
+  left: (4 - 1) * 60px;
 }
 
 @keyframes go {
   50% {
     transform:
-      translate(0px, 10px)
-      scale(0.5);
-      background-color: #44ff00;
+      translate(0px, 0px)
+      scale(1.2);
+      background-color: #08c41e;
   }
-} */
+} 
+
+.tabs {
+  border: 1px solid white;
+  width: 500px; 
+  align-items: center;
+  height: 450px;
+  margin: 5px 7px 20px 3%;
+  border-radius: 10px;
+}
+
+.result-container {
+  display: flex;
+}
+
+.result-color {
+  border-radius: 10px;
+  width: 170px;
+  height: 170px;
+  padding: 5px;
+  margin: 8px;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+

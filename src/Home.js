@@ -105,7 +105,6 @@ export function Home() {
       <div className='border-0 accordion-flush' style = {{marginBottom: "7%"}}>      
         <Description/>
       </div>
-
   </div>
 
   )
