@@ -12,6 +12,7 @@
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .accordion-button { /*Accordion.Header elements*/
@@ -39,12 +40,7 @@
   display: flex;
   width: 100%;
   justify-content: space-around;
-
-}
-
-.flex-items {
-  flex-direction: row;
-  justify-content: space-around;
+  flex-flow: row wrap;
 }
 
 .result-boxes {
@@ -52,4 +48,25 @@
   height: 170px;
   border-radius: 10px;
   text-align: center;
+}
+
+.select-and-result {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+select {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.result-text {
+  color: white;
+  margin-top: 20px;
+}
+
+
+.result-text-and-boxes {
+  display: flex;
+  flex-flow: column nowrap;
 }

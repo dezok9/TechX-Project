@@ -204,4 +204,13 @@ input:active, input:focus {
   vertical-align: bottom;
 }
 
+.boxes {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  /* margin-top: 20px; */
+}
 
+.white {
+  color: white;
+}

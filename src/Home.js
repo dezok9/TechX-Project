@@ -53,15 +53,14 @@ export function Home() {
                   >      
             </ColorPicker>
           </div>
-          <div style = {{ width: "456px", height: "260px", margin: "20px"}}>
-              <select value={options.value} onChange={handleType}
-              className='text-dark'>
+          <div class="select-and-result" style = {{ width: "456px", height: "260px", margin: "20px"}}>
+              <select value={options.value} onChange={handleType} className='text-dark'>
                 {options.map((option) => (
                   <option value={option.value}>{option.label}</option>
                 ))}
               </select>
-              <div className='row'>
-                <h1 style = {{textAlign: "center"}}><strong>Result</strong></h1>
+              <div className='row result-text-and-boxes'>
+                <h1 className='result-text' style = {{textAlign: "center"}}><strong>Result</strong></h1>
                 <Result col={color.hex} type={type}></Result>
               </div>
           </div>
