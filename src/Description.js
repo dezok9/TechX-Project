@@ -6,7 +6,7 @@ import {Accordion} from 'react-bootstrap';
 export function Description() {
   return (
     <Accordion>
-
+      <h3 class='m-top'>Learn about types of color blindness</h3>
       <Accordion.Item eventKey="0">
         <Accordion.Header>Deuteranomaly</Accordion.Header>
         <Accordion.Body className="description">

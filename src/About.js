@@ -7,7 +7,7 @@ export function About() {
   return (
     <div class="about">
       <header>
-        About Us
+        ABOUT US
       </header>
       {/* <ColorPickerImp/>  */}
       <div class = "website-body">

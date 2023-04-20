@@ -6,23 +6,23 @@ html {
     padding: 0 5% 0 5%; 
 }
 
-.header {
-    color: white;
-    align-items: center;
-    /* justify-content: center; */
+header {
+    text-align: center;
 }
 
 .information {
-    
+    text-align: center;
     color: white;
 }
 
 .card {
     background-color: white;
     color: black !important;
-    margin: 20px;
+    margin: 40px;
 }
 
 main {
     display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
 }

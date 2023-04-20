@@ -45,6 +45,7 @@ export function Home() {
       <Header/>
         <div className='flex-container'>
           <div style = {{margin: "20px"}}>
+            <h3>Select or input a color</h3>
             <ColorPicker width = {456} height = {228}
                   color = {color}
                   onChange = {setColor}
@@ -54,6 +55,7 @@ export function Home() {
             </ColorPicker>
           </div>
           <div class="select-and-result" style = {{ width: "456px", height: "260px", margin: "20px"}}>
+              <h3>Select a type of color blindness</h3>
               <select value={options.value} onChange={handleType} className='text-dark'>
                 {options.map((option) => (
                   <option value={option.value}>{option.label}</option>

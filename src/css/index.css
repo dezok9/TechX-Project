@@ -6,29 +6,39 @@
 /* button:hover{
   border-color: blue !important;
 } */
-@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Pathway+Extreme:wght@400;600&display=swap');
 .accordion {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
+  font-family: 'Pathway Extreme', sans-serif;
+  font-weight: 400;
+  border-radius: 20px !important;
 }
 
 .accordion-button { /*Accordion.Header elements*/
   color: black !important;
-  font-family: 'Calistoga', cursive;
+  font-weight: 600;
 
 }
 
 .accordion-button:hover {
-  border-radius: 1px solid black;
+  border-radius: 0px !important;
+  /* border-radius: 50px !important; */
 }
 
 .accordion-item {
   /* margin: 0 auto !important; */
   width: 50% !important;
+  /* border: 1px solid black; */
+  /* border-radius: 50px !important; */
 
+}
+
+.m-top {
+  margin-top: 50px;
 }
 
 .accordion-body {
