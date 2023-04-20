@@ -1,4 +1,5 @@
 import React from 'react'
+import "./../css/App.css"
 
 export function Result(props) {
   const blinder = require('color-blind');
@@ -22,11 +23,10 @@ export function Result(props) {
   select();
   return (
     <div>
-        <div>
-            <h1 style={{background: props.col}}>Before</h1>
-            <h1 className='' style={{background: result}}>After</h1>
-        </div>
-      
+        <div className = "result-container">
+            <h1 style={{background: props.col}} className = "result-color" >Before</h1>
+            <h1 style={{background: result}} className = "result-color" >After</h1>
+        </div>  
     </div>
   )
 }

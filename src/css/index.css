@@ -6,7 +6,7 @@
 /* button:hover{
   border-color: blue !important;
 } */
-
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Fredericka+the+Great&display=swap');
 .accordion {
   display: flex;
   flex-flow: column nowrap;
@@ -16,6 +16,8 @@
 
 .accordion-button { /*Accordion.Header elements*/
   color: black !important;
+  font-family: 'Calistoga', cursive;
+
 }
 
 .accordion-button:hover {
@@ -30,5 +32,24 @@
 
 .accordion-body {
   color: black;
+  font-family: 'Calistoga', cursive;
   
+}
+
+.interactive-content {
+  display: flex;
+  border: solid 1px white; 
+}
+
+.interactive-conent-container {
+  justify-content: space-around;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.7rem;
+}
+
+.flex-item {
+  align-items: center;
 }

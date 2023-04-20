@@ -42,23 +42,27 @@ export function Home() {
   return (
     <div>
       <Header/>
-      
-      <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-        <TabList>
-          <Tab>Hex Code</Tab>
-          <Tab>Color Palette</Tab>
-          <Tab>RGB</Tab>
-        </TabList>
-      </Tabs> 
+    
+      <div className = "interactive-conent">
 
-      <div className='d-flex mt-5'>
-        <div className='col'>
-          <div className='d-flex align-items-center justify-content-evenly  click'>
-            {/* <Button name="Hex"/>
-            <Button name="Color Palette"/>
-            <Button name="Rgb"/> */}
+      <div className = "interactive-content-container">
+
+      <div className = "tabs">
+        {/*The below 'Tabs' tab contains only the items that are going to be hidden/displayed in tabs.*/}  
+        <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+          <TabList>
+            <Tab>Hex Code</Tab>
+            <Tab>Color Palette</Tab>
+            <Tab>RGB</Tab>
+          </TabList>
+          <div className='col'>
+            <div className = 'd-flex align-items-center justify-content-evenly click'>
+              {/* <Button name="Hex"/> */}
+              {/* <Button name="Color Palette"/> */}
+              {/* <Button name="Rgb"/> */}
             <div>
-              {/* <TabPanel forceRender='true'> */}
+              <TabPanel forceRender='true' >
+                {/*Text box tab*/}
                 <input
                   type="text"
                   id="message"
@@ -66,44 +70,57 @@ export function Home() {
                   onChange={handleChange}
                   hideHSV 
                 />
-              {/* </TabPanel> */}
-              </div>
-              <div>
-                {/* <TabPanel default= "true"> */}
-                  <ColorPicker width = {456} height = {228}
-                        color = {color}
-                        onChange = {setColor}
-                        hideRGB = {true}
-                        hideHSV = {true} dark >      
-                  </ColorPicker>
-                {/* </TabPanel> */}
-              </div>
-              <div>
-                <Rgb/>
-              </div>
-          </div>
-        </div>
-        <div className='col mb-3'>
-          <div className='d-flex align-items-center justify-content-evenly  click'>
-            <div className="select-container row">
-              <select value={options.value} onChange={handleType}
-              className='text-dark'>
-                {options.map((option) => (
-                  <option value={option.value}>{option.label}</option>
-                ))}
-              </select>
+              </TabPanel>
             </div>
-            <div className='row'>
-              <h1>Result</h1>
+            <div>
+              <TabPanel default= "true">
+              <ColorPicker width = {456} height = {228}
+                    color = {color}
+                    onChange = {setColor}
+                    hideRGB = {true}
+                    hideHSV = {true} dark >
+              </ColorPicker>
+              </TabPanel>
+            </div>
+
+            <div>
+              <TabPanel forceRender='true'>
+              <Rgb></Rgb>
+              </TabPanel>
+
+          </div>
+          </div>
+          </div>
+        </Tabs>
+      </div>
+
+          <div className = 'd-flex align-items-center justify-content  click'>
+
+            <div className='flex-item'>
+              {/*The option for which color blindness you are attempting to render for.*/}
+              <div className = "select-container row">
+                <select value={options.value} onChange={handleType} className='text-dark'> 
+                    {options.map((option) => (
+                    <option value={option.value}>{option.label}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/*Result boxes */}
+            <div>
+              <h1 className = "title"><strong>Result</strong></h1>
               <Result col={color.hex} type={type}></Result>
             </div>
-          </div>
+
+          </div> 
         </div>
       </div>
+    </div>
+
+      {/*Accordion feature*/}
       <div className='border-0 accordion-flush'>      
         <Description/>
       </div>
-
   </div>
 
   )
